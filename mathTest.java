@@ -7,6 +7,12 @@ public class mathTest {
 
     @Test
     public void divideTest(){
-        assertEquals(3, math.divide(3, 0));
+        try {
+            math.divide(3, 0);
+            fail();
+            
+        } catch (ArithmeticException e) {
+            //Do nothing
+        }
     }
 }
